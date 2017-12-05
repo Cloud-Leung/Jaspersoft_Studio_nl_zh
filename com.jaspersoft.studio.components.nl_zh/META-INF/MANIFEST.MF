@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nl_zh
+Bundle-SymbolicName: com.jaspersoft.studio.components.nl_zh
+Bundle-Version: 1.0.0
+Bundle-ClassPath: com.jaspersoft.studio.components.nl_zh
+Bundle-Vendor: JASPERSOFT
+Fragment-Host: com.jaspersoft.studio.components
