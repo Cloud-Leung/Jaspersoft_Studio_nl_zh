@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.jaspersoft.studio.extension.nestpublish.commands.category"
+            name="Publish Category">
+      </category>
+      <command
+            categoryId="com.jaspersoft.studio.extension.nestpublish.commands.category"
+            id="com.jaspersoft.studio.extension.nestpublish.commands.publish"
+            name="Publish Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.jaspersoft.studio.extension.nestpublish.handlers.PublishHandler"
+            commandId="com.jaspersoft.studio.extension.nestpublish.commands.publish">
+         <!--<enabledWhen>
+            <with
+                  variable="selection">
+               <iterate
+                     ifEmpty="false">
+                  <adapt
+                        type="org.eclipse.core.resources.IResource">
+                     <test
+                           property="org.eclipse.core.resources.name"
+                           value="*.jrxml">
+                     </test>
+                  </adapt>
+               </iterate>
+            </with>
+         </enabledWhen>-->
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.jaspersoft.studio.preferences.StudioPreferencePage"
+            class="com.jaspersoft.studio.extension.nestpublish.WorkbenchPreferencePage"
+            id="com.jaspersoft.studio.extension.nestpublish.page"
+            name="%menu.template.nestpublish.label">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.jaspersoft.studio.extension.nestpublish.publishtool">
+            <command
+                  commandId="com.jaspersoft.studio.extension.nestpublish.commands.publish"
+                  disabledIcon="icons/publish_enable.png"
+                  icon="icons/publish_enable.png"
+                  id="com.jaspersoft.studio.extension.nestpublish.toolbars.publish"
+                  label="%toolbars.publish.label"
+                  style="push"
+                  tooltip="%toolbars.publish.tooltip">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.console.consoleFactories">
+      <consoleFactory
+            class="com.jaspersoft.studio.extension.nestpublish.console.ConsoleFactory"
+            label="%window.publish.console">
+      </consoleFactory>
+   </extension>
+
+
+</plugin>

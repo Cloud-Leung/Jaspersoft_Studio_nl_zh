@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nestpublish
+Bundle-SymbolicName: com.jaspersoft.studio.extension.nestpublish;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Bundle-Activator: com.jaspersoft.studio.extension.nestpublish.Activator
+Bundle-Vendor: JASPERSOFT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.expressions;bundle-version="3.4.401",
+ org.eclipse.core.resources;bundle-version="3.8.1",
+ org.eclipse.ui.console;bundle-version="3.5.100"
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/fastjson-1.2.11.jar,
+ .

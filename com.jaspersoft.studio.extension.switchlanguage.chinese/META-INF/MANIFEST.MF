@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Chinese
+Bundle-SymbolicName: com.jaspersoft.studio.extension.switchlanguage.chinese;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Bundle-Activator: com.jaspersoft.studio.extension.switchlanguage.chinese.Activator
+Bundle-Vendor: JASPERSOFT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
